@@ -1,0 +1,827 @@
+{
+  "metadata": {
+    "source": "Prabhakaran et al. 2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke",
+    "publisher": "American Heart Association / American Stroke Association",
+    "doi": "10.1161/STR.0000000000000513",
+    "year": 2026,
+    "replaces": ["2018 AIS Guideline", "2019 update"],
+    "extracted_date": "2026-05-09",
+    "verified_against_source": true,
+    "disclaimer": "This tool surfaces recommendations from the AHA/ASA 2026 guideline for clinical reference. It is decision support, not decision making. The treating clinician retains full responsibility for patient care decisions."
+  },
+  "cor_definitions": {
+    "1": { "label": "Class 1", "meaning": "Strong — Benefit >>> Risk", "verb": "Is recommended / Is indicated / Should" },
+    "2a": { "label": "Class 2a", "meaning": "Moderate — Benefit >> Risk", "verb": "Is reasonable / Can be useful / Can be beneficial" },
+    "2b": { "label": "Class 2b", "meaning": "Weak — Benefit ≥ Risk", "verb": "May be reasonable / May be considered / Usefulness uncertain" },
+    "3-no-benefit": { "label": "Class 3: No Benefit", "meaning": "Moderate — Benefit = Risk", "verb": "Is not recommended / Is not indicated" },
+    "3-harm": { "label": "Class 3: Harm", "meaning": "Strong — Risk > Benefit", "verb": "Should not be performed / Causes harm" }
+  },
+  "loe_definitions": {
+    "A": "High-quality evidence from >1 RCT, meta-analyses of high-quality RCTs",
+    "B-R": "Moderate-quality evidence from ≥1 RCT or meta-analyses of moderate-quality RCTs",
+    "B-NR": "Moderate-quality evidence from ≥1 well-designed nonrandomized studies, observational studies, or registry studies",
+    "C-LD": "Limited data — randomized or nonrandomized observational/registry studies with limitations of design or execution",
+    "C-EO": "Expert opinion — consensus of expert opinion based on clinical experience"
+  },
+  "pathways": [
+    { "id": "ed-arrival", "label": "ED Arrival / Initial Evaluation", "icon": "siren", "order": 1 },
+    { "id": "imaging", "label": "Imaging Decisions", "icon": "scan", "order": 2 },
+    { "id": "ivt-eligibility", "label": "IV Thrombolytic Eligibility", "icon": "syringe", "order": 3 },
+    { "id": "evt-eligibility", "label": "Endovascular Thrombectomy", "icon": "activity", "order": 4 },
+    { "id": "bp-management", "label": "Blood Pressure Management", "icon": "heart", "order": 5 },
+    { "id": "supportive-care", "label": "Supportive Care", "icon": "stethoscope", "order": 6 },
+    { "id": "pediatric", "label": "Pediatric Stroke", "icon": "baby", "order": 7 }
+  ],
+  "recommendations": [
+    {
+      "id": "img-1",
+      "section": "3.2",
+      "section_label": "Initial, Vascular, and Multimodal Imaging",
+      "pathway": "imaging",
+      "cor": "1",
+      "loe": "A",
+      "title": "Emergent NCCT or MRI on initial evaluation",
+      "text": "In patients with suspected AIS, emergent brain imaging with NCCT or MRI is recommended on initial evaluation to assess ischemic burden (eg, ASPECTS) and exclude intracranial hemorrhage before initiating reperfusion interventions.",
+      "applies_when": ["all suspected AIS"]
+    },
+    {
+      "id": "img-2",
+      "section": "3.2",
+      "section_label": "Initial, Vascular, and Multimodal Imaging",
+      "pathway": "imaging",
+      "cor": "1",
+      "loe": "B-NR",
+      "title": "Emergent imaging within 25 minutes",
+      "text": "In hospital systems that care for patients with suspected AIS, protocols based on process improvement initiatives should be established so that emergent brain imaging can be performed as rapidly as possible (eg, within 25 minutes) to facilitate timely reperfusion interventions.",
+      "applies_when": ["hospital quality improvement"],
+      "key_point": "Target: imaging within 25 minutes of arrival."
+    },
+    {
+      "id": "img-3",
+      "section": "3.2",
+      "section_label": "Initial, Vascular, and Multimodal Imaging",
+      "pathway": "imaging",
+      "cor": "1",
+      "loe": "B-NR",
+      "title": "Don't delay vascular imaging for serum creatinine",
+      "text": "In patients with suspected AIS and LVO, emergent vascular imaging with contrast-enhanced CTA and/or CTP should not be delayed to obtain serum creatinine concentration.",
+      "applies_when": ["suspected AIS with LVO", "vascular imaging"],
+      "key_point": "Don't wait for creatinine — proceed with CTA/CTP."
+    },
+    {
+      "id": "img-4",
+      "section": "3.2",
+      "section_label": "Initial, Vascular, and Multimodal Imaging",
+      "pathway": "imaging",
+      "cor": "2a",
+      "loe": "B-R",
+      "title": "DWI-FLAIR mismatch for unknown-onset/wake-up stroke",
+      "text": "In patients with suspected AIS who awaken from symptoms or have unknown time of onset >4.5 hours from last known well, but are otherwise eligible for thrombolysis, MRI DWI-FLAIR mismatch selection can be useful to determine eligibility for extended window IVT.",
+      "applies_when": ["wake-up stroke", "unknown onset", ">4.5h from LKW"]
+    },
+    {
+      "id": "img-5",
+      "section": "3.2",
+      "section_label": "Initial, Vascular, and Multimodal Imaging",
+      "pathway": "imaging",
+      "cor": "2a",
+      "loe": "B-R",
+      "title": "Perfusion imaging for 4.5–24h extended window IVT",
+      "text": "In patients with suspected AIS who awaken with symptoms or have unknown time of onset 4.5 to 24 hours from last known well, CTP or MR DWI-PWI (perfusion-weighted imaging) selection with automated postprocessing software analysis can be useful to determine eligibility for extended window IVT.",
+      "applies_when": ["wake-up stroke", "unknown onset", "4.5-24h from LKW"]
+    },
+    {
+      "id": "img-6",
+      "section": "3.2",
+      "section_label": "Initial, Vascular, and Multimodal Imaging",
+      "pathway": "imaging",
+      "cor": "1",
+      "loe": "A",
+      "title": "Emergent brain and vascular imaging within 24h of LVO",
+      "text": "In patients with suspected AIS and LVO presenting within 24 hours of last known well, emergent brain and vascular imaging (CT/CTA or MRI/MRA) of the cervical and intracranial vessels should be performed as rapidly as possible for EVT selection and treatment planning.",
+      "applies_when": ["suspected AIS", "suspected LVO", "within 24h of LKW"]
+    },
+    {
+      "id": "img-7",
+      "section": "3.2",
+      "section_label": "Initial, Vascular, and Multimodal Imaging",
+      "pathway": "imaging",
+      "cor": "2a",
+      "loe": "A",
+      "title": "Adjunctive perfusion imaging in 6–24h LVO window",
+      "text": "In patients with suspected AIS and LVO presenting within 6 to 24 hours of last known well, adjunctive CTP, MRI (DWI-FLAIR mismatch), or MR DWI-PWI with automated postprocessing software analysis can be useful in the evaluation for EVT, if immediately available.",
+      "applies_when": ["suspected AIS", "suspected LVO", "6-24h from LKW"]
+    },
+    {
+      "id": "img-8",
+      "section": "3.2",
+      "section_label": "Initial, Vascular, and Multimodal Imaging",
+      "pathway": "imaging",
+      "cor": "2b",
+      "loe": "B-R",
+      "title": "Direct triage to angiography (DTAS) from prehospital LVO",
+      "text": "In patients with suspected AIS and LVO based on prehospital assessment with a validated stroke severity scale (eg, RACE >4) and eligible for EVT, direct triage to the angiography suite (DTAS) for flat-panel head CT versus conventional imaging workflow followed by catheter-based angiography may be considered to reduce time to intervention and improve functional outcomes.",
+      "applies_when": ["prehospital RACE >4", "EVT-eligible"]
+    },
+    {
+      "id": "ivt-decision-1",
+      "section": "4.6.1",
+      "section_label": "Thrombolysis Decision-Making",
+      "pathway": "ivt-eligibility",
+      "cor": "1",
+      "loe": "A",
+      "title": "Faster IVT improves functional outcomes",
+      "text": "In adult patients with AIS with disabling deficits (regardless of NIHSS score) and eligible for IVT, faster treatment improves functional outcomes.",
+      "applies_when": ["adult", "disabling AIS deficits", "IVT-eligible"],
+      "key_point": "Time is brain — every minute of delay matters, regardless of NIHSS."
+    },
+    {
+      "id": "ivt-decision-2",
+      "section": "4.6.1",
+      "section_label": "Thrombolysis Decision-Making",
+      "pathway": "ivt-eligibility",
+      "cor": "1",
+      "loe": "B-NR",
+      "title": "Initiate IVT ASAP within 4.5h — don't delay for advanced imaging",
+      "text": "In adult patients with AIS who are eligible for IVT within 4.5 hours of symptom onset, treatment should be initiated as quickly as possible, assuring safe administration and avoiding potential delays associated with additional multimodal neuroimaging, such as CTA/MRA, and CT/MR perfusion imaging.",
+      "applies_when": ["adult", "≤4.5h from onset", "IVT-eligible"],
+      "key_point": "Don't delay IVT to obtain CTA/CTP — NCCT alone is sufficient for most decisions."
+    },
+    {
+      "id": "ivt-decision-3",
+      "section": "4.6.1",
+      "section_label": "Thrombolysis Decision-Making",
+      "pathway": "ivt-eligibility",
+      "cor": "1",
+      "loe": "B-NR",
+      "title": "Check blood glucose before IVT",
+      "text": "In patients with suspected ischemic stroke, treating health care professionals should determine blood glucose levels before IVT initiation to assess and urgently treat severe hypoglycemia and hyperglycemia, which may mimic acute stroke presentations.",
+      "applies_when": ["suspected ischemic stroke", "before IVT"],
+      "key_point": "Severe hypo/hyperglycemia (<50 or >400 mg/dL) can mimic stroke."
+    },
+    {
+      "id": "ivt-decision-4",
+      "section": "4.6.1",
+      "section_label": "Thrombolysis Decision-Making",
+      "pathway": "ivt-eligibility",
+      "cor": "1",
+      "loe": "A",
+      "title": "Treat with IVT despite mild-to-moderate early ischemic changes",
+      "text": "In patients with AIS who are otherwise eligible for IVT with early ischemic change of mild to moderate extent (other than frank hypodensity attributable to the clinical presentation) on initial brain imaging, IVT is recommended to improve functional outcome.",
+      "applies_when": ["AIS", "IVT-eligible", "mild-moderate early ischemic changes"]
+    },
+    {
+      "id": "ivt-decision-5",
+      "section": "4.6.1",
+      "section_label": "Thrombolysis Decision-Making",
+      "pathway": "ivt-eligibility",
+      "cor": "3-no-benefit",
+      "loe": "B-R",
+      "title": "IVT not recommended for mild, non-disabling deficits within 4.5h",
+      "text": "In eligible adult patients with AIS presenting with mild non-disabling stroke deficits (eg, isolated sensory syndrome in many cases) within 4.5 hours of symptom onset or last known well, IVT is not recommended as it has not shown superiority in improving functional outcomes compared to double antiplatelet treatment.",
+      "applies_when": ["adult", "mild non-disabling AIS", "≤4.5h from LKW"],
+      "key_point": "DAPT is non-inferior to IVT in mild, non-disabling stroke. Use disabling-deficit framework, not NIHSS alone."
+    },
+    {
+      "id": "ivt-decision-6",
+      "section": "4.6.1",
+      "section_label": "Thrombolysis Decision-Making",
+      "pathway": "ivt-eligibility",
+      "cor": "1",
+      "loe": "B-NR",
+      "title": "IVT recommended despite single/dual antiplatelet use",
+      "text": "In suspected patients with AIS who are taking single or DAPT and are otherwise eligible for IVT, IVT is recommended to improve functional outcomes despite an increase in risk of sICH compared with no antiplatelet therapy.",
+      "applies_when": ["AIS", "IVT-eligible", "on antiplatelets"],
+      "key_point": "Increased absolute sICH risk (~0.9–1.2%) outweighed by treatment benefit (~8%)."
+    },
+    {
+      "id": "ivt-decision-7",
+      "section": "4.6.1",
+      "section_label": "Thrombolysis Decision-Making",
+      "pathway": "ivt-eligibility",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "Don't delay IVT for hematology/coagulation testing if no abnormality suspected",
+      "text": "In patients with AIS within 4.5 hours of last known well and eligible for IVT, it is reasonable that IVT not be delayed while waiting for hematologic or coagulation testing if there is no reason to suspect an abnormal result.",
+      "applies_when": ["AIS", "≤4.5h from LKW", "IVT-eligible", "no suspicion of coagulopathy"]
+    },
+    {
+      "id": "ivt-decision-8",
+      "section": "4.6.1",
+      "section_label": "Thrombolysis Decision-Making",
+      "pathway": "ivt-eligibility",
+      "cor": "1",
+      "loe": "B-NR",
+      "title": "Don't obtain MRI to exclude microbleeds before IVT",
+      "text": "In patients with AIS who are eligible for IVT within 4.5 hours of symptom onset with unknown burden of cerebral microbleeds (CMB), it is recommended that IVT be administered without first obtaining MRI to exclude CMBs.",
+      "applies_when": ["AIS", "≤4.5h from onset", "IVT-eligible", "unknown CMB burden"]
+    },
+    {
+      "id": "ivt-choice-1",
+      "section": "4.6.2",
+      "section_label": "Choice of Thrombolytic Agent",
+      "pathway": "ivt-eligibility",
+      "cor": "1",
+      "loe": "A",
+      "title": "Tenecteplase 0.25 mg/kg or alteplase 0.9 mg/kg within 4.5h",
+      "text": "In adult patients with AIS presenting within 4.5 hours of symptom onset or last known well and eligible for IVT, tenecteplase at a dose of 0.25 mg/kg body weight (max 25 mg) or alteplase at a dose of 0.9 mg/kg body weight is recommended to improve functional outcomes.",
+      "applies_when": ["adult", "≤4.5h from LKW", "IVT-eligible"],
+      "key_point": "Tenecteplase: single bolus over 5–10s. Alteplase: 10% bolus + 60-min infusion. Pediatric dosing not determined."
+    },
+    {
+      "id": "ivt-choice-2",
+      "section": "4.6.2",
+      "section_label": "Choice of Thrombolytic Agent",
+      "pathway": "ivt-eligibility",
+      "cor": "3-no-benefit",
+      "loe": "A",
+      "title": "Tenecteplase 0.4 mg/kg dose is NOT recommended",
+      "text": "In adult patients with AIS presenting within 4.5 hours of symptom onset or last known well and eligible for IVT, tenecteplase at a dose of 0.4 mg/kg body weight is not recommended.",
+      "applies_when": ["adult", "≤4.5h from LKW", "IVT-eligible"],
+      "key_point": "Higher tenecteplase dose has shown potential for harm without additional benefit."
+    },
+    {
+      "id": "ivt-extended-1",
+      "section": "4.6.3",
+      "section_label": "Extended Time Windows for IVT",
+      "pathway": "ivt-eligibility",
+      "cor": "2a",
+      "loe": "B-R",
+      "title": "Wake-up/unknown-onset IVT with MRI DWI-FLAIR mismatch",
+      "text": "In patients with AIS who (a) have unknown time of onset and are within 4.5 hours from symptom recognition and (b) have an MRI-DWI lesion smaller than one-third of the MCA territory and no marked signal change on FLAIR, IVT administered within 4.5 hours of stroke symptom recognition can be beneficial to improve functional outcomes.",
+      "applies_when": ["unknown onset", "wake-up stroke", "≤4.5h from recognition", "DWI-FLAIR mismatch"]
+    },
+    {
+      "id": "ivt-extended-2",
+      "section": "4.6.3",
+      "section_label": "Extended Time Windows for IVT",
+      "pathway": "ivt-eligibility",
+      "cor": "2a",
+      "loe": "B-R",
+      "title": "Perfusion-selected IVT in 4.5–9h window",
+      "text": "In patients with AIS who have salvageable ischemic penumbra detected on automated perfusion imaging and who (a) awake with stroke symptoms within 9 hours from the midpoint of sleep or (b) are 4.5–9 hours from last known well, IV thrombolysis may be reasonable to improve functional outcomes.",
+      "applies_when": ["4.5-9h from LKW", "salvageable penumbra on CTP/MR-PWI"]
+    },
+    {
+      "id": "ivt-extended-3",
+      "section": "4.6.3",
+      "section_label": "Extended Time Windows for IVT",
+      "pathway": "ivt-eligibility",
+      "cor": "2b",
+      "loe": "B-R",
+      "title": "IVT for LVO in 4.5–24h window when EVT not available",
+      "text": "In patients with AIS due to LVO with salvageable ischemic penumbra, presenting within 4.5 to 24 hours from symptom onset or last known well, and who cannot receive EVT, treatment with IVT directed by individuals with expertise in thrombolytic stroke care may be beneficial to improve functional outcomes.",
+      "applies_when": ["LVO", "4.5-24h from LKW", "EVT not available", "salvageable penumbra"]
+    },
+    {
+      "id": "ivt-special-1",
+      "section": "4.6.5",
+      "section_label": "Other Specific Circumstances",
+      "pathway": "ivt-eligibility",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "IVT in adults with sickle cell disease",
+      "text": "In eligible adult patients with AIS with known sickle cell disease, IVT can be beneficial to improve functional outcome without increased sICH, life-threatening systemic hemorrhage, or other thrombolytic complications.",
+      "applies_when": ["adult", "sickle cell disease", "otherwise IVT-eligible"]
+    },
+    {
+      "id": "ivt-special-2",
+      "section": "4.6.5",
+      "section_label": "Other Specific Circumstances",
+      "pathway": "ivt-eligibility",
+      "cor": "2b",
+      "loe": "C-LD",
+      "title": "IVT for non-arteritic CRAO is uncertain",
+      "text": "In adults with acute nonarteritic central retinal artery occlusion (CRAO) causing disabling visual loss, and who are otherwise eligible for IVT, the usefulness of treatment with IVT within 4.5 hours of time last known well is uncertain.",
+      "applies_when": ["adult", "non-arteritic CRAO", "disabling visual loss", "≤4.5h from LKW"],
+      "key_point": "Requires ophthalmology assessment, ESR for giant cell arteritis exclusion, and shared decision-making."
+    },
+    {
+      "id": "evt-concomitant-1",
+      "section": "4.7.1",
+      "section_label": "EVT Concomitant With IVT",
+      "pathway": "evt-eligibility",
+      "cor": "1",
+      "loe": "A",
+      "title": "Don't skip IVT in patients eligible for both IVT and EVT",
+      "text": "In patients with AIS who are eligible for both IVT and EVT, IVT is safe and recommended to improve overall reperfusion efficacy and clinical outcomes.",
+      "applies_when": ["AIS", "eligible for both IVT and EVT"],
+      "key_point": "Skipping IVT to facilitate EVT is not recommended."
+    },
+    {
+      "id": "evt-concomitant-2",
+      "section": "4.7.1",
+      "section_label": "EVT Concomitant With IVT",
+      "pathway": "evt-eligibility",
+      "cor": "1",
+      "loe": "A",
+      "title": "Don't delay EVT to assess IVT response",
+      "text": "In patients with AIS who are eligible for both IVT and EVT, IVT should be administered as rapidly as possible, without observation, to assess clinical response or delay in initiating EVT, to improve treatment times and clinical outcomes.",
+      "applies_when": ["AIS", "eligible for both IVT and EVT"],
+      "key_point": "Don't observe for IVT response before EVT — every minute counts."
+    },
+    {
+      "id": "evt-1",
+      "section": "4.7.2",
+      "section_label": "EVT for Adult Patients",
+      "pathway": "evt-eligibility",
+      "cor": "1",
+      "loe": "A",
+      "title": "EVT 0–6h, ASPECTS 3–10, anterior circulation LVO",
+      "text": "In patients with AIS from anterior circulation proximal LVO of the ICA or M1, presenting within 6 hours from onset of symptoms, with NIHSS score ≥6, prestroke mRS score of 0 to 1, and ASPECTS 3 to 10, EVT is recommended to improve functional clinical outcomes and reduce mortality.",
+      "applies_when": ["anterior circulation LVO", "ICA or M1", "≤6h from onset", "NIHSS ≥6", "prestroke mRS 0-1", "ASPECTS 3-10"]
+    },
+    {
+      "id": "evt-2",
+      "section": "4.7.2",
+      "section_label": "EVT for Adult Patients",
+      "pathway": "evt-eligibility",
+      "cor": "1",
+      "loe": "A",
+      "title": "EVT 6–24h, ASPECTS 6–10, anterior circulation LVO",
+      "text": "In patients with AIS from anterior circulation proximal LVO of the ICA or M1 presenting between 6 and 24 hours from onset of symptoms, with NIHSS score ≥6, prestroke mRS score 0 to 1 and ASPECTS ≥6, EVT is recommended to improve functional clinical outcomes and reduce mortality.",
+      "applies_when": ["anterior circulation LVO", "ICA or M1", "6-24h from onset", "NIHSS ≥6", "prestroke mRS 0-1", "ASPECTS ≥6"]
+    },
+    {
+      "id": "evt-3",
+      "section": "4.7.2",
+      "section_label": "EVT for Adult Patients",
+      "pathway": "evt-eligibility",
+      "cor": "1",
+      "loe": "A",
+      "title": "EVT 6–24h, ASPECTS 3–5, selected patients <80",
+      "text": "In selected patients with AIS from anterior circulation proximal LVO of the ICA or M1, presenting between 6 and 24 hours from onset of symptoms, with age <80 years, NIHSS score ≥6, prestroke mRS score 0 to 1, ASPECTS 3 to 5, and without significant mass effect on imaging, EVT is recommended to improve functional clinical outcomes and reduce mortality.",
+      "applies_when": ["anterior circulation LVO", "ICA or M1", "6-24h from onset", "age <80", "NIHSS ≥6", "prestroke mRS 0-1", "ASPECTS 3-5", "no significant mass effect"],
+      "key_point": "Limited generalizability — patients >80, with renal failure, refractory HTN, comorbid conditions confounding neuro assessment, or life expectancy <3 months were under-represented."
+    },
+    {
+      "id": "evt-4",
+      "section": "4.7.2",
+      "section_label": "EVT for Adult Patients",
+      "pathway": "evt-eligibility",
+      "cor": "2a",
+      "loe": "B-R",
+      "title": "EVT 0–6h, ASPECTS 0–2, selected patients <80",
+      "text": "In selected patients with AIS from anterior circulation proximal LVO of the ICA or M1 presenting within 6 hours from onset of symptoms, with age <80 years, NIHSS score ≥6, prestroke mRS 0 to 1, ASPECTS 0 to 2, and without significant mass effect on imaging, EVT is reasonable to improve functional clinical outcomes and reduce mortality.",
+      "applies_when": ["anterior circulation LVO", "ICA or M1", "≤6h from onset", "age <80", "NIHSS ≥6", "prestroke mRS 0-1", "ASPECTS 0-2", "no significant mass effect"]
+    },
+    {
+      "id": "evt-5",
+      "section": "4.7.2",
+      "section_label": "EVT for Adult Patients",
+      "pathway": "evt-eligibility",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "EVT 0–6h with mild preexisting disability (mRS 2)",
+      "text": "In patients with AIS from anterior circulation proximal LVO of the ICA or M1 presenting within 6 hours from onset of symptoms, with NIHSS score ≥6, and ASPECTS ≥6, who have a prestroke mRS score of 2, EVT is reasonable to improve functional clinical outcomes and reduce accumulated disability.",
+      "applies_when": ["anterior circulation LVO", "ICA or M1", "≤6h from onset", "NIHSS ≥6", "ASPECTS ≥6", "prestroke mRS 2"]
+    },
+    {
+      "id": "evt-6",
+      "section": "4.7.2",
+      "section_label": "EVT for Adult Patients",
+      "pathway": "evt-eligibility",
+      "cor": "2b",
+      "loe": "B-NR",
+      "title": "EVT 0–6h with moderate preexisting disability (mRS 3–4)",
+      "text": "In patients with AIS from anterior circulation proximal LVO of the ICA or M1 presenting within 6 hours from onset of symptoms, with NIHSS score ≥6, and ASPECTS of ≥6, who have a prestroke mRS score of 3 to 4, EVT might be reasonable to improve functional clinical outcomes and reduce accumulated disability.",
+      "applies_when": ["anterior circulation LVO", "ICA or M1", "≤6h from onset", "NIHSS ≥6", "ASPECTS ≥6", "prestroke mRS 3-4"],
+      "key_point": "Shared decision-making with patient/family is essential given lower magnitude of effect."
+    },
+    {
+      "id": "evt-7",
+      "section": "4.7.2",
+      "section_label": "EVT for Adult Patients",
+      "pathway": "evt-eligibility",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "EVT 0–6h for dominant proximal M2 occlusion",
+      "text": "In patients with AIS from occlusion of the dominant proximal M2 division of the MCA presenting within 6 hours from onset of symptoms with a prestroke mRS score of 0 to 1, NIHSS score of ≥6, and ASPECTS of ≥6, EVT is reasonable to improve functional outcomes, but the benefits are uncertain.",
+      "applies_when": ["dominant proximal M2 occlusion", "≤6h from onset", "NIHSS ≥6", "ASPECTS ≥6", "prestroke mRS 0-1"],
+      "key_point": "Dominant M2 = M2 segment supplying ≥50% of MCA territory (not left/right side dominance)."
+    },
+    {
+      "id": "evt-8",
+      "section": "4.7.2",
+      "section_label": "EVT for Adult Patients",
+      "pathway": "evt-eligibility",
+      "cor": "3-no-benefit",
+      "loe": "A",
+      "title": "EVT NOT recommended for nondominant M2, distal MCA, ACA, or PCA occlusions",
+      "text": "In patients with AIS from occlusion of the proximal nondominant or codominant division proximal M2 segment of the MCA, or distal MCA, anterior cerebral artery (ACA), or posterior cerebral artery (PCA), EVT is not recommended to improve functional outcomes.",
+      "applies_when": ["nondominant/codominant M2", "distal MCA", "ACA", "PCA"],
+      "key_point": "Recent ESCAPE-MeVO and DISTAL trials showed no EVT benefit for medium/distal vessel occlusions."
+    },
+    {
+      "id": "evt-posterior-1",
+      "section": "4.7.3",
+      "section_label": "Posterior Circulation EVT",
+      "pathway": "evt-eligibility",
+      "cor": "1",
+      "loe": "A",
+      "title": "Basilar EVT within 24h, NIHSS ≥10, PC-ASPECTS ≥6",
+      "text": "In patients with AIS, with basilar artery occlusion, a baseline mRS score of 0 to 1, NIHSS score ≥10 at presentation, and PC-ASPECTS ≥6 (mild ischemic damage), EVT within 24 hours from onset of symptoms is recommended to achieve better functional outcome and reduce mortality.",
+      "applies_when": ["basilar artery occlusion", "NIHSS ≥10", "PC-ASPECTS ≥6", "≤24h from onset", "prestroke mRS 0-1"],
+      "key_point": "PC-ASPECTS: pons/midbrain (2 pts each), thalami (1 each), occipital lobes (1 each), cerebellar hemispheres (1 each)."
+    },
+    {
+      "id": "evt-posterior-2",
+      "section": "4.7.3",
+      "section_label": "Posterior Circulation EVT",
+      "pathway": "evt-eligibility",
+      "cor": "2b",
+      "loe": "B-R",
+      "title": "Basilar EVT with NIHSS 6–9 — effectiveness not well established",
+      "text": "In patients with AIS, with basilar artery occlusion, a baseline mRS score of 0 to 1, NIHSS score 6 to 9 at presentation, and PC-ASPECTS ≥6 (mild ischemic damage) the effectiveness of EVT within 24 hours to improve functional outcomes and reduce mortality is not well established.",
+      "applies_when": ["basilar artery occlusion", "NIHSS 6-9", "PC-ASPECTS ≥6", "≤24h from onset", "prestroke mRS 0-1"]
+    },
+    {
+      "id": "bp-1",
+      "section": "4.3",
+      "section_label": "Blood Pressure Management",
+      "pathway": "bp-management",
+      "cor": "1",
+      "loe": "C-LD",
+      "title": "Correct hypotension and hypovolemia",
+      "text": "In patients with AIS, hypotension and hypovolemia should be corrected to maintain systemic perfusion levels necessary to support organ function.",
+      "applies_when": ["all AIS patients"]
+    },
+    {
+      "id": "bp-2",
+      "section": "4.3",
+      "section_label": "Blood Pressure Management",
+      "pathway": "bp-management",
+      "cor": "1",
+      "loe": "C-EO",
+      "title": "Treat HTN early when comorbid conditions require it",
+      "text": "In patients with AIS, early treatment of hypertension is indicated when required by comorbid conditions (eg, concomitant acute coronary event, acute heart failure, aortic dissection, postthrombolysis sICH, or preeclampsia/eclampsia) to reduce the risk of complications.",
+      "applies_when": ["AIS with comorbid acute MI/HF/dissection/sICH/eclampsia"]
+    },
+    {
+      "id": "bp-3",
+      "section": "4.3",
+      "section_label": "Blood Pressure Management",
+      "pathway": "bp-management",
+      "cor": "1",
+      "loe": "B-NR",
+      "title": "Lower BP <185/110 before IVT",
+      "text": "Patients with AIS who have elevated BP and are otherwise eligible for treatment with IVT should have their SBP lowered to <185 mm Hg and diastolic blood pressure (DBP) <110 mm Hg before IVT therapy is initiated to reduce hemorrhagic complications.",
+      "applies_when": ["AIS", "IVT-eligible", "elevated BP"],
+      "key_point": "Target: SBP <185 mm Hg AND DBP <110 mm Hg before starting IVT."
+    },
+    {
+      "id": "bp-4",
+      "section": "4.3",
+      "section_label": "Blood Pressure Management",
+      "pathway": "bp-management",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "Pre-EVT BP target ≤185/110 (no IVT given)",
+      "text": "In patients for whom EVT is planned and who have not received IVT therapy, it is reasonable to maintain BP ≤185/110 mm Hg before the procedure to avoid complications and improve patient outcomes.",
+      "applies_when": ["EVT planned", "no IVT given"]
+    },
+    {
+      "id": "bp-5",
+      "section": "4.3",
+      "section_label": "Blood Pressure Management",
+      "pathway": "bp-management",
+      "cor": "1",
+      "loe": "B-R",
+      "title": "Maintain BP <180/105 for 24h after IVT",
+      "text": "BP should be maintained at <180/105 mm Hg for at least the first 24 hours after IVT treatment.",
+      "applies_when": ["post-IVT", "first 24 hours"],
+      "key_point": "Target: <180/105 mm Hg for ≥24 hours post-IVT."
+    },
+    {
+      "id": "bp-6",
+      "section": "4.3",
+      "section_label": "Blood Pressure Management",
+      "pathway": "bp-management",
+      "cor": "3-no-benefit",
+      "loe": "B-R",
+      "title": "Intensive SBP <140 after IVT in mild–moderate AIS not recommended",
+      "text": "In patients with mild to moderate severity AIS who have been treated with IVT, intensive SBP reduction (target of <140 mm Hg compared with <180 mm Hg) is not recommended because it is not associated with an improvement in functional outcome.",
+      "applies_when": ["mild-moderate AIS", "post-IVT"]
+    },
+    {
+      "id": "bp-7",
+      "section": "4.3",
+      "section_label": "Blood Pressure Management",
+      "pathway": "bp-management",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "Maintain BP ≤180/105 during and 24h after EVT",
+      "text": "In patients who undergo EVT, it is reasonable to maintain BP at a level ≤180/105 mm Hg during and for 24 hours after the procedure.",
+      "applies_when": ["during EVT", "24h post-EVT"]
+    },
+    {
+      "id": "bp-8",
+      "section": "4.3",
+      "section_label": "Blood Pressure Management",
+      "pathway": "bp-management",
+      "cor": "3-harm",
+      "loe": "A",
+      "title": "Intensive SBP <140 after successful EVT recanalization is HARMFUL",
+      "text": "In patients with AIS with LVO of the anterior circulation who have been successfully recanalized by endovascular therapy (mTICI 2b, 2c, or 3) and without other indication for blood pressure management target, intensive SBP reduction target of <140 mm Hg for the first 72 hours is harmful and not recommended.",
+      "applies_when": ["successful EVT recanalization", "anterior circulation LVO", "first 72h post-EVT"],
+      "key_point": "Do NOT target SBP <140 mm Hg in the first 72h after successful EVT — this causes harm (lower functional independence, higher mortality)."
+    },
+    {
+      "id": "bp-9",
+      "section": "4.3",
+      "section_label": "Blood Pressure Management",
+      "pathway": "bp-management",
+      "cor": "3-no-benefit",
+      "loe": "A",
+      "title": "Routine BP lowering 48–72h after AIS not effective (no IVT/EVT)",
+      "text": "In patients with BP <220/120 mm Hg who did not receive IVT or EVT and do not have a comorbid condition requiring urgent antihypertensive treatment, initiating or reinitiating treatment of hypertension within the first 48 to 72 hours after an AIS is not effective to prevent death or dependency.",
+      "applies_when": ["BP <220/120", "no IVT or EVT", "no urgent comorbid indication", "first 48-72h"]
+    },
+    {
+      "id": "glucose-1",
+      "section": "4.5",
+      "section_label": "Blood Glucose Management",
+      "pathway": "supportive-care",
+      "cor": "1",
+      "loe": "C-LD",
+      "title": "Treat hypoglycemia <60 mg/dL",
+      "text": "In patients with AIS, hypoglycemia (blood glucose <60 mg/dL) should be treated to avoid complications.",
+      "applies_when": ["AIS", "blood glucose <60 mg/dL"],
+      "key_point": "Hypoglycemia can mimic stroke; J-shaped relationship with mortality."
+    },
+    {
+      "id": "glucose-2",
+      "section": "4.5",
+      "section_label": "Blood Glucose Management",
+      "pathway": "supportive-care",
+      "cor": "2a",
+      "loe": "C-LD",
+      "title": "Treat persistent hyperglycemia to target 140–180 mg/dL",
+      "text": "In patients with AIS, it is reasonable to treat persistent hyperglycemia to achieve blood glucose levels in a range of 140 to 180 mg/dL with close monitoring to prevent worse functional outcomes.",
+      "applies_when": ["AIS with persistent hyperglycemia"],
+      "key_point": "Target 140–180 mg/dL — not tighter."
+    },
+    {
+      "id": "glucose-3",
+      "section": "4.5",
+      "section_label": "Blood Glucose Management",
+      "pathway": "supportive-care",
+      "cor": "3-no-benefit",
+      "loe": "A",
+      "title": "Tight glucose control (80–130) NOT recommended",
+      "text": "In hospitalized patients with AIS with hyperglycemia, treatment with IV insulin to achieve blood glucose levels in the range of 80 to 130 mg/dL is not recommended to improve 3-month functional outcomes.",
+      "applies_when": ["hospitalized AIS", "hyperglycemia"],
+      "key_point": "SHINE trial: tight control causes hypoglycemia without functional benefit."
+    },
+    {
+      "id": "antiplt-1",
+      "section": "4.8",
+      "section_label": "Antiplatelet Treatment",
+      "pathway": "supportive-care",
+      "cor": "1",
+      "loe": "A",
+      "title": "Aspirin within 48 hours of AIS",
+      "text": "In patients with AIS, administration of aspirin is recommended within 48 hours after stroke onset to reduce risk of death and dependency.",
+      "applies_when": ["AIS", "within 48h of onset"]
+    },
+    {
+      "id": "antiplt-2",
+      "section": "4.8",
+      "section_label": "Antiplatelet Treatment",
+      "pathway": "supportive-care",
+      "cor": "1",
+      "loe": "A",
+      "title": "DAPT for 21 days in minor noncardioembolic AIS or high-risk TIA (no IVT)",
+      "text": "In patients with minor (NIHSS score ≤3) noncardioembolic AIS or high-risk TIA (ABCD2 score ≥4) who did not receive IVT, DAPT (aspirin and clopidogrel with loading dose of clopidogrel) should be initiated early (within 24 hours after symptom onset) and continued for 21 days, followed by single antiplatelet therapy (SAPT) to reduce the 90-day risk of recurrent ischemic stroke.",
+      "applies_when": ["minor AIS NIHSS ≤3", "noncardioembolic", "or high-risk TIA ABCD2 ≥4", "within 24h", "no IVT received"],
+      "key_point": "NIHSS ≤3 (not ≤5) — load clopidogrel, start within 24h, 21 days then SAPT."
+    },
+    {
+      "id": "antiplt-3",
+      "section": "4.8",
+      "section_label": "Antiplatelet Treatment",
+      "pathway": "supportive-care",
+      "cor": "3-harm",
+      "loe": "B-R",
+      "title": "Don't substitute aspirin for IVT/EVT",
+      "text": "In patients with AIS who are otherwise eligible for IVT or mechanical thrombectomy, aspirin is not recommended as a substitute for acute stroke treatment to improve patient outcomes.",
+      "applies_when": ["IVT/EVT-eligible AIS"],
+      "key_point": "Aspirin alone is not a substitute for thrombolysis or thrombectomy when patient is eligible."
+    },
+    {
+      "id": "antiplt-4",
+      "section": "4.8",
+      "section_label": "Antiplatelet Treatment",
+      "pathway": "supportive-care",
+      "cor": "3-harm",
+      "loe": "B-R",
+      "title": "Don't give IV aspirin within 90 minutes of IVT start",
+      "text": "In patients with AIS who are eligible for IVT, IV aspirin should not be administered concurrently or within 90 minutes after the start of IVT given the risk of hemorrhage.",
+      "applies_when": ["IVT being administered", "first 90 minutes"]
+    },
+    {
+      "id": "anticoag-1",
+      "section": "4.9",
+      "section_label": "Anticoagulants",
+      "pathway": "supportive-care",
+      "cor": "2a",
+      "loe": "A",
+      "title": "Early oral anticoagulation in AF after milder AIS is reasonable",
+      "text": "In carefully selected (eg, milder severity) patients with AIS with atrial fibrillation, a strategy of early oral anticoagulation poststroke is low risk and is reasonable compared with a strategy of delayed anticoagulation, although the efficacy of early anticoagulation for prevention of early recurrent stroke is not established.",
+      "applies_when": ["AIS with AF", "milder severity"],
+      "key_point": "ELAN, OPTIMAS, TIMING trials: early DOAC (≤4 days) noninferior to delayed."
+    },
+    {
+      "id": "anticoag-2",
+      "section": "4.9",
+      "section_label": "Anticoagulants",
+      "pathway": "supportive-care",
+      "cor": "3-no-benefit",
+      "loe": "A",
+      "title": "Early anticoagulation within 48h is not recommended",
+      "text": "In patients with AIS, early anticoagulation (within 48 hours of stroke onset) does not reduce the likelihood of early neurological worsening or increase the likelihood of a favorable functional outcome and is not recommended.",
+      "applies_when": ["AIS", "first 48h"],
+      "key_point": "Theoretical benefits of preventing recurrence/worsening have not been borne out in trials."
+    },
+    {
+      "id": "msu-1",
+      "section": "2.5",
+      "section_label": "Role of Mobile Stroke Units",
+      "pathway": "ed-arrival",
+      "cor": "1",
+      "loe": "A",
+      "title": "MSUs over conventional EMS for thrombolytic-eligible patients",
+      "text": "In patients with suspected AIS, the use of MSUs over conventional EMS where available is recommended for the transport and management of thrombolytic-eligible patients to ensure the fastest achievable onset-to-treatment time and improve functional outcomes.",
+      "applies_when": ["suspected AIS", "thrombolytic-eligible", "MSU available"]
+    },
+    {
+      "id": "msu-2",
+      "section": "2.5",
+      "section_label": "Role of Mobile Stroke Units",
+      "pathway": "ed-arrival",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "MSUs for EVT triage to thrombectomy-capable facility",
+      "text": "In endovascular thrombectomy-eligible patients, use of MSUs can be beneficial to identify and triage patients to the appropriate thrombectomy-capable facility with prehospital notification of receiving stroke teams.",
+      "applies_when": ["suspected LVO", "EVT-eligible", "MSU available"]
+    },
+    {
+      "id": "telestroke-1",
+      "section": "2.8",
+      "section_label": "Telemedicine",
+      "pathway": "ed-arrival",
+      "cor": "1",
+      "loe": "B-R",
+      "title": "Telestroke for hospitals without acute neurological expertise",
+      "text": "For patients with AIS presenting to EDs without acute neurological expertise, telestroke systems are effective over usual care by the ED team for IVT decision-making and optimal thrombolytic delivery including increased thrombolytic administration and shorter time to delivery.",
+      "applies_when": ["ED without neuro expertise", "AIS presentation"]
+    },
+    {
+      "id": "telestroke-2",
+      "section": "2.8",
+      "section_label": "Telemedicine",
+      "pathway": "ed-arrival",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "Telestroke reduces short-term mortality",
+      "text": "For patients with AIS treated at hospitals without local stroke expertise, telestroke is reasonable to reduce short-term mortality.",
+      "applies_when": ["hospital without local stroke expertise"]
+    },
+    {
+      "id": "telestroke-3",
+      "section": "2.8",
+      "section_label": "Telemedicine",
+      "pathway": "ed-arrival",
+      "cor": "1",
+      "loe": "B-R",
+      "title": "Prehospital telemedicine in ambulance",
+      "text": "For patients with suspected stroke in the prehospital setting, telemedicine in the ambulance should be considered, when feasible, to complement paramedic assessment to identify candidates for reperfusion interventions.",
+      "applies_when": ["prehospital", "suspected stroke", "telemedicine available"]
+    },
+    {
+      "id": "peds-img-1",
+      "section": "3.2",
+      "section_label": "Pediatric Imaging",
+      "pathway": "pediatric",
+      "cor": "2a",
+      "loe": "C-LD",
+      "title": "Emergent MRI/MRA preferred for pediatric AIS workup",
+      "text": "In pediatric patients with suspected AIS, emergent brain and vascular imaging with MRI/MRA of the cervical and intracranial vessels is reasonable to identify patients with large vessel occlusion and to differentiate arterial ischemic stroke from hemorrhagic stroke or stroke mimics.",
+      "applies_when": ["pediatric (<18y)", "suspected AIS"],
+      "key_point": "MRI/MRA preferred when feasible without delay; better differentiates AIS from mimics in children."
+    },
+    {
+      "id": "peds-img-2",
+      "section": "3.2",
+      "section_label": "Pediatric Imaging",
+      "pathway": "pediatric",
+      "cor": "2a",
+      "loe": "C-LD",
+      "title": "CT/CTA acceptable when pediatric MRI not available within 25 min",
+      "text": "In pediatric patients with suspected AIS, emergent brain and vascular imaging with CT/CTA of the cervical and intracranial vessels is reasonable if MRI/MRA imaging is not available immediately (within 25 minutes) to identify patients with large vessel occlusion.",
+      "applies_when": ["pediatric (<18y)", "suspected AIS", "MRI not available within 25 min"]
+    },
+    {
+      "id": "peds-ivt-1",
+      "section": "4.6.1",
+      "section_label": "Pediatric IV Thrombolytic",
+      "pathway": "pediatric",
+      "cor": "2b",
+      "loe": "C-LD",
+      "title": "IV alteplase may be considered in pediatric patients 28d–18y within 4.5h",
+      "text": "In pediatric patients aged 28 days to 18 years with confirmed AIS presenting within 4.5 hours of symptom onset and disabling deficits, IVT with alteplase may be considered as it is safe, but efficacy is uncertain.",
+      "applies_when": ["pediatric 28d–18y", "≤4.5h from onset", "disabling deficits"],
+      "key_point": "TIPS trial stopped due to recruitment but confirmed safety of 0.9 mg/kg alteplase in pediatric patients with PedNIHSS ≥4. Tenecteplase pediatric data are limited (n=11)."
+    },
+    {
+      "id": "peds-evt-1",
+      "section": "4.7.5",
+      "section_label": "Pediatric Endovascular Thrombectomy",
+      "pathway": "pediatric",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "EVT for pediatric ≥6 years with LVO within 6h of onset",
+      "text": "In pediatric patients ≥6 years with acute neurological symptoms and ischemic stroke due to LVO and within 6 hours from symptom onset, EVT can be effective if performed by experienced neurointerventionalists to improve functional outcomes.",
+      "applies_when": ["pediatric ≥6y", "LVO", "≤6h from onset", "experienced neurointerventionalist"],
+      "key_point": "Save ChildS Pro registry: better outcomes with EVT vs medical alone, especially ≥6y, <6h, PedNIHSS ≥6."
+    },
+    {
+      "id": "peds-evt-2",
+      "section": "4.7.5",
+      "section_label": "Pediatric Endovascular Thrombectomy",
+      "pathway": "pediatric",
+      "cor": "2a",
+      "loe": "B-NR",
+      "title": "EVT for pediatric ≥6 years with LVO 6–24h with salvageable tissue",
+      "text": "In pediatric patients ≥6 years with acute neurological symptoms and ischemic stroke due to LVO, 6 to 24 hours from symptom onset, and with potentially salvageable brain tissue, EVT can be effective to improve functional outcomes.",
+      "applies_when": ["pediatric ≥6y", "LVO", "6-24h from onset", "salvageable brain tissue"],
+      "key_point": "Pediatric perfusion thresholds for penumbra/core not yet established — adult thresholds may not apply."
+    },
+    {
+      "id": "peds-evt-3",
+      "section": "4.7.5",
+      "section_label": "Pediatric Endovascular Thrombectomy",
+      "pathway": "pediatric",
+      "cor": "2b",
+      "loe": "B-NR",
+      "title": "EVT for pediatric 28d–6y with LVO within 24h may be reasonable",
+      "text": "In pediatric patients aged 28 days to 6 years with acute neurological symptoms, including first-time seizure and AIS due to LVO, within 24 hours from symptom onset, and with potentially salvageable brain tissue, EVT performed by neurointerventionalists with pediatric experience may be reasonable to improve functional outcomes.",
+      "applies_when": ["pediatric 28d–6y", "LVO", "≤24h from onset", "salvageable tissue", "pediatric-experienced neurointerventionalist"],
+      "key_point": "Smaller vessel caliber in <6y requires highly skilled pediatric neurointerventionalist. Neonates (<28d) — only case reports, no systematic evidence."
+    }
+  ],
+  "ivt_eligibility_checklist": {
+    "title": "IV Thrombolytic Eligibility — Quick Reference",
+    "preamble": "Use as a structured reminder of the AHA-aligned considerations. Final eligibility is the treating clinician's decision.",
+    "categories": [
+      {
+        "name": "Time window",
+        "items": [
+          { "id": "time-1", "question": "Within 4.5 hours of last known well (LKW)?", "weight": "primary", "guideline_ref": "4.6.2" },
+          { "id": "time-2", "question": "Wake-up or unknown onset, with DWI-FLAIR mismatch on MRI?", "weight": "extended-window", "guideline_ref": "4.6.3" },
+          { "id": "time-3", "question": "4.5–9h with salvageable penumbra on perfusion imaging?", "weight": "extended-window", "guideline_ref": "4.6.3" }
+        ]
+      },
+      {
+        "name": "Clinical",
+        "items": [
+          { "id": "clin-1", "question": "Disabling neurological deficit? (Use disabling-deficit framework, not NIHSS alone — see Table 4)", "weight": "primary", "guideline_ref": "4.6.1" },
+          { "id": "clin-2", "question": "Age ≥18? (Pediatric patients 28d–18y: COR 2b, C-LD per §4.6.1)", "weight": "primary", "guideline_ref": "4.6.1" },
+          { "id": "clin-3", "question": "BP can be lowered to <185/110 mm Hg before bolus?", "weight": "primary", "guideline_ref": "4.3" },
+          { "id": "clin-4", "question": "Blood glucose checked? (Severe hypo/hyperglycemia treated and corrected)", "weight": "primary", "guideline_ref": "4.6.1" }
+        ]
+      },
+      {
+        "name": "Imaging",
+        "items": [
+          { "id": "img-1", "question": "Non-contrast CT excludes intracranial hemorrhage?", "weight": "primary", "guideline_ref": "3.2" },
+          { "id": "img-2", "question": "Mild–moderate early ischemic changes are NOT a contraindication", "weight": "informational", "guideline_ref": "4.6.1" }
+        ]
+      },
+      {
+        "name": "Hemorrhage / coagulation considerations",
+        "items": [
+          { "id": "hem-1", "question": "No active internal bleeding?", "weight": "primary" },
+          { "id": "hem-2", "question": "No known bleeding diathesis (platelets <100k, INR >1.7, aPTT >40s, recent therapeutic LMWH)?", "weight": "primary" },
+          { "id": "hem-3", "question": "No DOAC dose within 48h (with normal renal function)?", "weight": "primary" },
+          { "id": "hem-4", "question": "Single/dual antiplatelet use is NOT a contraindication (COR 1, B-NR)", "weight": "informational", "guideline_ref": "4.6.1" }
+        ]
+      },
+      {
+        "name": "Recent surgery / trauma",
+        "items": [
+          { "id": "surg-1", "question": "No major surgery in past 14 days?", "weight": "secondary" },
+          { "id": "surg-2", "question": "No serious head trauma or prior stroke in past 3 months?", "weight": "primary" }
+        ]
+      },
+      {
+        "name": "Special populations (consider individually — not absolute exclusions)",
+        "items": [
+          { "id": "spec-1", "question": "Sickle cell disease — IVT can be beneficial in adults (COR 2a, B-NR; pediatric SCD risk-benefit unknown).", "weight": "informational", "guideline_ref": "4.6.5" },
+          { "id": "spec-2", "question": "Pregnancy — individualized risk-benefit; IVT is not absolutely contraindicated.", "weight": "informational" },
+          { "id": "spec-3", "question": "Mild non-disabling deficits (NIHSS ≤3) — IVT NOT recommended; DAPT preferred (COR 3 No Benefit, B-R).", "weight": "informational", "guideline_ref": "4.6.1" }
+        ]
+      }
+    ]
+  }
+}
