@@ -637,9 +637,23 @@ export default function StrokeGuide() {
             <div style={{ fontSize: 13, color: '#2d3748', lineHeight: 1.6, marginBottom: 12 }}>
               Source: <strong>{KB.metadata.source}</strong>, {KB.metadata.publisher} ({KB.metadata.year}).
             </div>
-            <div style={{ fontSize: 12, color: '#4a5568', lineHeight: 1.6, fontFamily: 'ui-monospace, "SF Mono", Menlo, monospace', marginBottom: 16 }}>
+            <div style={{ fontSize: 12, color: '#4a5568', lineHeight: 1.6, fontFamily: 'ui-monospace, "SF Mono", Menlo, monospace', marginBottom: 12 }}>
               DOI: {KB.metadata.doi}
             </div>
+            <a
+              href={KB.metadata.source_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 6,
+                fontSize: 12, fontWeight: 600, color: '#0d3b66',
+                textDecoration: 'none', padding: '8px 12px',
+                border: '1px solid #0d3b66', borderRadius: 3,
+                marginBottom: 16
+              }}
+            >
+              Read the full guideline on AHA Journals →
+            </a>
             <div style={{ padding: 12, backgroundColor: '#fffbeb', borderLeft: '3px solid #fcd34d', borderRadius: 3, fontSize: 12, color: '#78350f', lineHeight: 1.6 }}>
               {KB.metadata.disclaimer}
             </div>
@@ -651,7 +665,18 @@ export default function StrokeGuide() {
       )}
 
       <footer style={{ maxWidth: 880, margin: '0 auto', padding: '20px 24px 32px', fontSize: 11, color: '#a0aec0', textAlign: 'center' }}>
-        StrokeGuide · {KB.recommendations.length} indexed recommendations · v0.2 prototype
+        <div>StrokeGuide · {KB.recommendations.length} indexed recommendations · v0.3</div>
+        <div style={{ marginTop: 6 }}>
+          Source:{' '}
+          <a
+            href={KB.metadata.source_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#0d3b66', textDecoration: 'none', fontWeight: 600 }}
+          >
+            Prabhakaran et al., 2026 AHA/ASA AIS Guideline
+          </a>
+        </div>
       </footer>
     </div>
   );
